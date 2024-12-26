@@ -1,0 +1,27 @@
+.calculator {
+    border: 5px solid red;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    height: 700px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    color: green;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin: 0px auto;
+    background-color: black;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+
+}
+.calculator #calc
+{
+    color:white;
+}
+.calculator h2
+{
+    color: red;
+}

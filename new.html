@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculator {
+            border: 5px solid red;
+            padding: 30px;
+            text-align: center;
+            width: 300px;
+            height: 700px;
+            padding-top: 5px;
+            padding-bottom: 30px;
+            color: green;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin: 0px auto;
+            background-color: black;
+            font-style: italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+            'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+
+        }
+        .calculator #calc
+        {
+            color:white;
+        }
+        .calculator h2
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+   
+<div class="calculator">
+    <div><h2>3MTT <span id="calc">Calculator</span></h2></div>
+    <form action="#" method="post">
+        
+        <label for=""><b>ENTER FIRST NUMBER</b></label><br><br>
+        <input type="number" placeholder="ENTER FIRST NUMBER" id="number1" name="">
+        <br><br><br>
+        <label for=""><b>ENTER SECOND NUMBER</b></label><br><br>
+        <input type="number" placeholder="ENTER SECOND NUMBER" id="number2" name="">
+        <br><br>
+        <label for=""><b>ENTER THIRD NUMBER</b></label><br><br>
+        <input type="number" placeholder="ENTER THIRD NUMBER" id="number3" name="">
+        <br><br>
+    </form>
+        <button onclick="add()">add</button>
+        <button onclick="sub()">subtract</button>
+        <button onclick="mul()">multiply</button>
+        <button onclick="div()">divide</button>
+        <button onclick="area()">Area of a cuboid</button>
+        
+        <button onclick="area1()">Area of a Triangle</button>
+        <button onclick="hero()">Area of a Triangle(Using Hero's Formulae)</button>
+        <br><br><br>
+        <input type="number" placeholder="ADDITON ANSWER" id="answer1" name=""><br><br>
+        <input type="number" placeholder="SUBTRACTION ANSWER" id="answer2" name=""><br><br>
+        <input type="number" placeholder="MULTIPLICATION ANSWER" id="answer3" name=""><br><br>
+        <input type="number" placeholder="DIVISION ANSWER" id="answer4" name=""><br><br>
+        <input type="number" placeholder="AREA OF CUBOID" id="answer5" name=""><br><br>
+        <input type="number" placeholder="AREA OF TRIANGLE" id="answer6" name=""><br><br>
+        <input type="number" placeholder="AREA OF TRIANGLE HERO" id="answer7" name=""><br><br>
+</div>
+<script>
+    // ADDITION FUNCTION
+    function addNumber1(x,y)
+    {return  (Number(x) + Number(y))
+    }
+
+    function add(e,f)
+    {
+        let a = (document.getElementById("number1").value);
+        let b = (document.getElementById("number2").value);
+        
+        document.getElementById("answer1").value = addNumber1(a,b);
+    }
+    // SUBTRACTION Function
+    function subNumber2(p,q)
+    {
+        return (Number(p) - Number(q))
+    }
+    function sub(c,d)
+    {
+        let e = document.getElementById("number1").value;
+        let f = document.getElementById("number2").value;
+
+        document.getElementById("answer2").value = subNumber2(e,f);
+    }
+    // MULTIPLICATION FUNCTION
+    {
+        function mulnumber(m,n)
+    {
+        return (Number(m) * Number(n))
+    }
+    function mul(s,t)
+    {
+        let u = document.getElementById("number1").value;
+        let v = document.getElementById("number2").value;
+
+        document.getElementById("answer3").value = mulnumber(u,v);
+
+    }
+    
+    }
+    // DIVISION FUNCTION
+    {
+        function divNumber(j,k)
+        {
+            return (Number(j)/Number(k));
+        }
+        function div()
+        {
+            let g = document.getElementById("number1").value;
+        let h = document.getElementById("number2").value;
+        
+        document.getElementById("answer4").value = divNumber(g,h);
+        }
+
+    }
+    // AREA OF CUBOID 
+    function areaofcuboid(d,s,t)
+    {
+        return (Number(d) * Number(s) * Number(t))
+    }
+
+    function area()
+    {
+       let ab = document.getElementById("number1").value;
+       let bd = document.getElementById("number2").value;
+       let cv =  document.getElementById("number3").value;
+
+        document.getElementById("answer5").value = areaofcuboid(ab,bd,cv);
+    }
+    
+    // AREA OF TRIANGLE   
+    function areaOfTriangle(vb,vn)
+        {
+            return (1/2 * Number(vb) * Number(vn) )
+        }
+        function area1()
+        {
+        let er = document.getElementById("number1").value;
+        let et = document.getElementById("number2").value;
+        
+
+       document.getElementById("answer6").value = areaOfTriangle(er,et);
+
+        
+    }
+    // AREA OF TRIANGLE USING HERO'S FORMULAE
+    {
+        function heroFormulae(df,dg,dh)
+        {
+            let dp = (Number(df) + Number(dg) + Number(dh)) / 2
+        return ( dp * (dp - Number(df)) * (dp - Number(dg)) * (dp - Number(dh)) )
+        }
+    }
+    
+    function hero()
+    {
+        let dj = document.getElementById("number1").value;
+       let dk = document.getElementById("number2").value;
+       let dl =  document.getElementById("number3").value;
+
+       document.getElementById("answer7").value = Math.sqrt (heroFormulae(dj,dk,dl))
+    }
+
+
+</script>
+    
+</body>
+</html>
